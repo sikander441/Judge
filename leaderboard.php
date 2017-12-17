@@ -71,11 +71,11 @@ $(document).ready(function(){
                 <tbody>
 
             <?php while( $row=mysqli_fetch_assoc($result))
-            {
+            {$tn=$row['teamname'];
                ?>
-                    <tr class="<?php if($row['teamname']==$teamname){echo 'current';}?>">
+                    <tr onclick="location.href='user.php?teamname=<?php echo $tn; ?>';"  class="<?php if($row['teamname']==$teamname){echo 'current';}?>">
                         <td><?php echo ++$counter;?></td>
-                        <td><a href="#"><img src="images/user(1).svg" class="avatar" alt="Avatar" widht=36px height=36px> <?php echo $row['teamname'] ?></a></td>
+                        <td><img src="images/user(1).svg" class="avatar" alt="Avatar" widht=36px height=36px> <?php echo $row['teamname'] ?></a></td>
                         <td><?php echo $row['score'] ?></td>
 
                     </tr>
