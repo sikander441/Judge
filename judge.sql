@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2017 at 10:19 PM
+-- Generation Time: Dec 17, 2017 at 06:02 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -40,8 +40,14 @@ CREATE TABLE `contest` (
 
 INSERT INTO `contest` (`teamname`, `pid`, `score`) VALUES
 ('sikander441', 6, 30),
-('sikander441', 10, 30),
-('test_user', 6, 30);
+('sikander441', 10, 50),
+('test_user', 6, 30),
+('test_user', 9, 140),
+('test_user', 10, 50),
+('sikander441', 9, 140),
+('sikander441', 7, 70),
+('test_user', 7, 70),
+('asd', 6, 30);
 
 -- --------------------------------------------------------
 
@@ -59,8 +65,11 @@ CREATE TABLE `leaderboard` (
 --
 
 INSERT INTO `leaderboard` (`teamname`, `score`) VALUES
-('sikander441', 130),
-('test_user', 30);
+('asd', 30),
+('dsa', 0),
+('sad', 0),
+('sikander441', 360),
+('test_user', 290);
 
 -- --------------------------------------------------------
 
@@ -82,9 +91,9 @@ CREATE TABLE `problems` (
 --
 
 INSERT INTO `problems` (`pid`, `title`, `statement`, `score`, `description`, `test_cases`) VALUES
-(6, 'A Very Big Sum', 'You are given an array of integers of size N. You need to print the sum of the elements in the array, keeping in mind that some of those integers may be quite large.<br />\r\n<br />\r\n<b>Input format</b><br />\r\nThe first line of the input consists of an integer . The next line contains space-separated integers contained in the array.<br />\r\n<br />\r\n<b>Output Format</b><br />\r\nPrint a single value equal to the sum of the elements in the array.<br />\r\n<br />\r\n<b>Constraints</b><br />\r\n<br />\r\n1 0<=A[i]<=10^7', 15, 'Easy', 3),
-(7, 'Palindrome index', 'Given a string, , of lowercase letters, determine the index of the character whose removal will make  a palindrome. If  is already a palindrome or no such character exists, then print . There will always be a valid solution, and any correct answer is acceptable. For example, if  \"bcbc\", we can either remove \"b\" at index  or \"c\" at index .<br />\r\n<br />\r\n<b>Input Format</b><br />\r\n<br />\r\nThe first line contains an integer, , denoting the number of test cases. <br />\r\nEach line  of the  subsequent lines (where ) describes a test case in the form of a single string, .<br />\r\n<br />\r\n<b>Constraints</b><br />\r\n<br />\r\nAll characters are lowercase English letters.<br />\r\nOutput Format<br />\r\n<br />\r\nPrint an integer denoting the zero-indexed position of the character that makes  not a palindrome; if  is already a palindrome or no such character exists, print .<br />\r\n<br />\r\n<b>Sample Input</b><br />\r\n<br />\r\n3<br />\r\naaab<br />\r\nbaa<br />\r\naaa<br />\r\n<b>Sample Output</b><br />\r\n<br />\r\n3<br />\r\n0<br />\r\n-1<br />\r\n<b>Explanation</b><br />\r\n<br />\r\nTest Case 1: \"aaab\" <br />\r\nRemoving \"b\" at index  results in a palindrome, so we print  on a new line.<br />\r\n<br />\r\nTest Case 2: \"baa\" <br />\r\nRemoving \"b\" at index  results in a palindrome, so we print  on a new line.<br />\r\n<br />\r\nTest Case 3: \"aaa\" <br />\r\nThis string is already a palindrome, so we print ; however, , , and  are also all acceptable answers, as the string will still be a palindrome if any one of the characters at those indices are removed.<br />\r\n<br />\r\n<b>Note:</b> The custom checker logic for this challenge is available here.', 30, 'easy', 14),
-(9, 'Choclates', 'ily has a chocolate bar consisting of a row of  squares where each square has an integer written on it. She wants to share it with Ron for his birthday, which falls on month  and day . Lily wants to give Ron a piece of chocolate only if it contains  consecutive squares whose integers sum to .<br />\r\n<br />\r\nGiven , , and the sequence of integers written on each square of Lilys chocolate bar, how many different ways can Lily break off a piece of chocolate to give to Ron?<br />\r\n<br />\r\nFor example, if ,  and the chocolate bar contains  rows of squares with the integers written on them from left to right, the following diagram shows two ways to break off a piece:<br />\r\n<br />\r\n', 29, 'easy', 14),
+(6, 'A Very Big Sum', 'You are given an array of integers of size N. You need to print the sum of the elements in the array, keeping in mind that some of those integers may be quite large.<br />\r\n<br />\r\n<b>Input format</b><br />\r\nThe first line of the input consists of an integer . The next line contains space-separated integers contained in the array.<br />\r\n<br />\r\n<b>Output Format</b><br />\r\nPrint a single value equal to the sum of the elements in the array.<br />\r\n<br />\r\n<b>Constraints</b><br />\r\n<br />\r\n1 0<=A[i]<=10^7', 30, 'Easy', 3),
+(7, 'Palindrome index', 'Given a string, , of lowercase letters, determine the index of the character whose removal will make  a palindrome. If  is already a palindrome or no such character exists, then print . There will always be a valid solution, and any correct answer is acceptable. For example, if  \"bcbc\", we can either remove \"b\" at index  or \"c\" at index .<br />\r\n<br />\r\n<b>Input Format</b><br />\r\n<br />\r\nThe first line contains an integer, , denoting the number of test cases. <br />\r\nEach line  of the  subsequent lines (where ) describes a test case in the form of a single string, .<br />\r\n<br />\r\n<b>Constraints</b><br />\r\n<br />\r\nAll characters are lowercase English letters.<br />\r\nOutput Format<br />\r\n<br />\r\nPrint an integer denoting the zero-indexed position of the character that makes  not a palindrome; if  is already a palindrome or no such character exists, print .<br />\r\n<br />\r\n<b>Sample Input</b><br />\r\n<br />\r\n3<br />\r\naaab<br />\r\nbaa<br />\r\naaa<br />\r\n<b>Sample Output</b><br />\r\n<br />\r\n3<br />\r\n0<br />\r\n-1<br />\r\n<b>Explanation</b><br />\r\n<br />\r\nTest Case 1: \"aaab\" <br />\r\nRemoving \"b\" at index  results in a palindrome, so we print  on a new line.<br />\r\n<br />\r\nTest Case 2: \"baa\" <br />\r\nRemoving \"b\" at index  results in a palindrome, so we print  on a new line.<br />\r\n<br />\r\nTest Case 3: \"aaa\" <br />\r\nThis string is already a palindrome, so we print ; however, , , and  are also all acceptable answers, as the string will still be a palindrome if any one of the characters at those indices are removed.<br />\r\n<br />\r\n<b>Note:</b> The custom checker logic for this challenge is available here.', 140, 'easy', 14),
+(9, 'Choclates', 'ily has a chocolate bar consisting of a row of  squares where each square has an integer written on it. She wants to share it with Ron for his birthday, which falls on month  and day . Lily wants to give Ron a piece of chocolate only if it contains  consecutive squares whose integers sum to .<br />\r\n<br />\r\nGiven , , and the sequence of integers written on each square of Lilys chocolate bar, how many different ways can Lily break off a piece of chocolate to give to Ron?<br />\r\n<br />\r\nFor example, if ,  and the chocolate bar contains  rows of squares with the integers written on them from left to right, the following diagram shows two ways to break off a piece:<br />\r\n<br />\r\n', 140, 'easy', 14),
 (10, 'Weighted Uniform Strings', 'A weighted string is a string of lowercase English letters where each letter has a weight in the inclusive range from to , defined below:<br />\r\nWe define the following terms:<br />\r\n<br />\r\nThe weight of a string is the sum of the weights of all the strings characters. For example:<br />\r\n uniform string is a string consisting of a single character repeated zero or more times. For example, ccc and a are uniform strings, but bcb and cd are not (i.e., they consist of more than one distinct character).<br />\r\nGiven a string, , let  be the set of weights for all possible uniform substrings (contiguous) of string . You have to answer  queries, where each query  consists of a single integer, . For each query, print Yes on a new line if ; otherwise, print No instead.<br />\r\n<br />\r\nNote: The  symbol denotes that  is an element of set .', 50, 'HARD', 5);
 
 -- --------------------------------------------------------
@@ -247,7 +256,83 @@ INSERT INTO `submission` (`teamname`, `pid`, `code`) VALUES
 ('sikander441', 6, 'uploads/sikander441/6/sikander441_10-12-10_test.cpp'),
 ('sikander441', 10, 'uploads/sikander441/10/sikander441_10-12-49_problem_TLE.cpp'),
 ('sikander441', 10, 'uploads/sikander441/10/sikander441_10-12-34_problem.cpp'),
-('test_user', 6, 'uploads/test_user/6/test_user_10-12-59_test.cpp');
+('test_user', 6, 'uploads/test_user/6/test_user_10-12-59_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_07-12-48_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_07-12-17_test.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_07-12-44_problem_TLE.cpp'),
+('test_user', 9, 'uploads/test_user/9/test_user_07-12-52_problem_semi.cpp'),
+('test_user', 10, 'uploads/test_user/10/test_user_07-12-42_problem_TLE.cpp'),
+('sikander441', 9, 'uploads/sikander441/9/sikander441_09-12-13_problem_2_semi.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_10-12-09_problem_TLE.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_10-12-48_problem_TLE.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_10-12-33_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_10-12-21_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_10-12-10_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_10-12-36_a.out'),
+('sikander441', 9, 'uploads/sikander441/9/sikander441_10-12-56_problem.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_10-12-14_problem.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_10-12-25_problem_TLE.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_11-12-02_problem.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_11-12-23_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_11-12-59_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_11-12-21_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_11-12-34_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_11-12-49_test.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_11-12-12_problem_TLE.cpp'),
+('sikander441', 7, 'uploads/sikander441/7/sikander441_11-12-59_problem_2.cpp'),
+('sikander441', 7, 'uploads/sikander441/7/sikander441_11-12-29_problem_2.cpp'),
+('sikander441', 7, 'uploads/sikander441/7/sikander441_11-12-38_problem_2_semi.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_11-12-51_test.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_11-12-08_problem.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_11-12-00_problem_TLE.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_05-12-44_problem_TLE.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_05-12-37_problem_TLE.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_05-12-01_test.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_05-12-26_test.cpp'),
+('test_user', 10, 'uploads/test_user/10/test_user_05-12-41_problem.cpp'),
+('test_user', 10, 'uploads/test_user/10/test_user_05-12-50_problem.cpp'),
+('test_user', 10, 'uploads/test_user/10/test_user_05-12-38_problem.cpp'),
+('test_user', 10, 'uploads/test_user/10/test_user_06-12-53_problem_TLE.cpp'),
+('test_user', 7, 'uploads/test_user/7/test_user_06-12-30_problem_2.cpp'),
+('test_user', 9, 'uploads/test_user/9/test_user_06-12-46_problem.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_06-12-05_test.cpp'),
+('test_user', 7, 'uploads/test_user/7/test_user_06-12-34_problem_2_semi.cpp'),
+('test_user', 7, 'uploads/test_user/7/test_user_06-12-41_problem_2.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_06-12-08_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_06-12-52_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_06-12-55_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_06-12-41_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_06-12-38_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_06-12-58_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-53.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-06.cpp'),
+('sikander441', 10, 'uploads/sikander441/10/sikander441_08-12-53.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-55.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-08.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-16.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-24.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-32.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-19.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-30.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-37_test.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-59.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-02.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-06.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-11.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-26.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_08-12-39.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_08-12-03.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_08-12-21.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_08-12-03.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_08-12-54.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_08-12-34.cpp'),
+('test_user', 6, 'uploads/test_user/6/test_user_08-12-53.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_09-12-11.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_09-12-29.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_09-12-49.cpp'),
+('sikander441', 6, 'uploads/sikander441/6/sikander441_09-12-10.cpp'),
+('asd', 6, 'uploads/asd/6/asd_11-12-00_test.cpp'),
+('asd', 6, 'uploads/asd/6/asd_11-12-53.cpp');
 
 -- --------------------------------------------------------
 
@@ -271,6 +356,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`teamname`, `password`, `user1`, `user2`, `email1`, `email2`, `type`) VALUES
 ('admin', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, NULL, NULL, 'admin'),
+('asd', '7815696ecbf1c96e6894b779456d330e', 'asd', 'asd', 'asd', 'asd', 'user'),
+('dsa', '5f039b4ef0058a1d652f13d612375a5b', 'ad', 'dsadsa', 'sad@dsa', 'dsa@dsa', 'user'),
+('sad', '5f039b4ef0058a1d652f13d612375a5b', 'dsa', 'dsadsa', 'dsa@ds', 'dsadas@dsa', 'user'),
 ('sikander441', 'ce4dd986b74f00e363a12d2d15fa0f0b', 'Sikander Singh', 'Sakshit Tiwari', 'sikander441@gmail.com', 'sakshi13@gmail.com', 'user'),
 ('test_user', 'ce4dd986b74f00e363a12d2d15fa0f0b', 'Sikander Singh', 'sakshi tiwari', 'sikander441@gmail.com', 'sakshi13@gmail.com', 'user');
 
