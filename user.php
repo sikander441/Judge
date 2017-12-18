@@ -89,9 +89,9 @@ if(isset($_SESSION['teamname']))
                          <?php while( $row=mysqli_fetch_assoc($result))
                          { $pid=$row['pid'];
                             ?>
-                          <tr onclick="location.href='submit.php?pid=<?php echo $pid; ?>';">
+                          <tr>
                                <th scope="row"><?php echo ++$counter;?></th>
-                               <td><?php echo $row['title'] ?></td>
+                               <td><a href="submit.php?pid=<?php echo $pid; ?>"><?php echo $row['title'] ?></a></td>
                                <td><?php echo $row['score'] ?></td>
 
                            </tr>
