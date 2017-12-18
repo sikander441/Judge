@@ -39,9 +39,11 @@ if(isset($_SESSION['teamname']))
  <!-- Use any element to open the sidenav -->
  <span onclick="openNav()" class="glyphicon glyphicon-tasks">MENU</span>
 
- <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
  <div id="main" style="padding-left:150px; padding-right: 170px; padding-top: 100px;">
+
    <div class="bs-example">
+     <div style="font-size:30px; padding:10px" class="pull-right"> <i >Welcome : </i> <b><?php echo $_SESSION['teamname']; ?></b></div>
        <div class="panel panel-default">
            <div class="panel-body">
              <h1>Instructions!</h1>
