@@ -1,4 +1,12 @@
-<?php include('server.php'); ?>
+<?php include('server.php');
+
+
+if(isset($_SESSION['teamname']))
+ { header('location:index.php');}
+  else
+    {
+
+       ?>
 
 <html>
 <head>
@@ -72,3 +80,5 @@
         </div> <!-- ./container --><div class="container">
 
 </body>
+
+<?php } ?>

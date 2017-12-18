@@ -1,5 +1,10 @@
 <?php
- include('server.php')
+ include('server.php');
+ if(isset($_SESSION['teamname']))
+  { header('location:index.php');}
+   else 
+     {
+
  ?>
 
 
@@ -24,3 +29,4 @@
      </div>
 </body>
 </html>
+<?php } ?>
