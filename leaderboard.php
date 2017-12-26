@@ -59,7 +59,7 @@ $(document).ready(function(){
                 </div>
             </div>
 
-            <table class="table table-striped table-hover current">
+            <table class="table  table-hover current">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -73,9 +73,10 @@ $(document).ready(function(){
             <?php while( $row=mysqli_fetch_assoc($result))
             {$tn=$row['teamname'];
                ?>
-                    <tr onclick="location.href='user.php?teamname=<?php echo $tn; ?>';"  class="<?php if($row['teamname']==$teamname){echo 'current';}?>">
+
+                    <tr class="<?php if($row['teamname']==$teamname){echo 'current';}?>">
                         <td><?php echo ++$counter;?></td>
-                        <td><img src="images/user(1).svg" class="avatar" alt="Avatar" widht=36px height=36px> <?php echo $row['teamname'] ?></a></td>
+                        <td><a href='user.php?teamname=<?php echo $tn; ?>'><img src="images/user(1).svg" class="avatar" alt="Avatar" widht=36px height=36px> <?php echo $row['teamname'] ?></a></td>
                         <td><?php echo $row['score'] ?></td>
 
                     </tr>
