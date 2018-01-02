@@ -124,15 +124,25 @@ if(isset($_POST['problem_submit']))
     $score=(int)$score;
     $sql="insert into problems(title,statement,score,description,test_cases) values('$title','$statement',$score,'$desc','$test_cases')";
     mysqli_query($conn,$sql);
-    $sql="select pid from problems where title='$title' and score='$score'";
+    $sql="select pid,test_cases from problems where title='$title' and score='$score'";
     $result=mysqli_query($conn,$sql);
     $row=mysqli_fetch_assoc($result);
     $pid=$row['pid'];
+    $tno=$row['test_cases'];
     echo "<script>alert('Problem succesfully added!')</script>";
     echo "<script>alert('Add the test cases in the problem folder in $pid')</script>";
     $path="problems/$pid";
         if(!is_dir($path)){
           mkdir($path);
+          mkdir($path.'/input');
+          mkdir($path.'/output');
+          }
+          for($i=1;$i<=$tno;$i+=1)
+          {
+            $fd=fopen($path.'/input//'.$i.'.in','w');
+            fclose($fd);
+            $fd=fopen($path.'/output//'.$i.'.out','w');
+            fclose($fd);
           }
   }
 

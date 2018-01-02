@@ -71,7 +71,7 @@ if(isset($_SESSION['teamname']))
                <textarea name="test_cases" class="form-control" id="tets_cases" rows="1" cols="2"></textarea>
               </div>
          <button type="submit" name="problem_submit" class="btn btn-primary">Submit</button>
-      </form>reports
+      </form>
 </div>
 
   <div id="ReloadThis" class="tab-pane  active" id="submissions">
